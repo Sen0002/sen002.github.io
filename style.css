@@ -710,7 +710,8 @@ footer {
   }
 
   .logo {
-    width: 100px;
+    width: 50px;
+    align-items: left;
     margin-bottom: 10px;
   }
 
@@ -815,39 +816,4 @@ footer {
 /* Sembunyikan checkbox */
 .menu-toggle {
     display: none;
-}
-
-/* Tombol hamburger hanya tampil di mobile */
-.hamburger {
-    display: none;
-    font-size: 26px;
-    color: white;
-    cursor: pointer;
-    z-index: 1001;
-    position: absolute;
-    top: 25px;
-    right: 20px;
-}
-
-/* Responsive nav: mobile only */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #00caca;
-        position: absolute;
-        top: 80px;
-        right: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-
-    /* Tampilkan menu jika checkbox dicentang */
-    .menu-toggle:checked + .hamburger + .nav ul {
-        display: flex;
-    }
 }
