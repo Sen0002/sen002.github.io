@@ -702,38 +702,62 @@ footer {
 /* ============================= */
 
 @media (max-width: 768px) {
-  /* Header */
+  /* Header Mobile Layout */
   .header-flex {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 20px;
+    display: grid;
+    grid-template-areas:
+      "logo cart"
+      "title title"
+      "search search";
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    padding: 15px;
   }
 
   .logo {
-    width: 50px;
-    align-items: left;
-    margin-bottom: 10px;
+    grid-area: logo;
+    width: 100px;
+    align-self: center;
+    justify-self: start;
+  }
+
+  .site-info {
+    grid-area: title;
+    padding: 0;
+    text-align: center;
   }
 
   .site-info h1 {
     font-size: 1.5rem;
+    margin: 5px 0;
+  }
+
+  .search-bar {
+    grid-area: search;
+    width: 100%;
+    margin-top: 5px;
   }
 
   .cart-icon {
+    grid-area: cart;
     font-size: 24px;
-    margin-top: 10px;
+    margin: 0;
+    align-self: center;
+    justify-self: end;
   }
 
-  /* Nav */
+  /* Navigation Mobile */
   .nav ul {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+    padding: 10px;
   }
 
   .nav ul li a {
+    padding: 8px;
     font-size: 16px;
-    padding: 8px 16px;
   }
+}
 
   /* Hero Section */
   .hero {
